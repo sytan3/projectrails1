@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @football_game.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @football_game.age %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @football_game.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @football_game.weight %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @football_game.phone %>
+</p>
+
+<%= link_to 'Edit', edit_football_game_path(@football_game) %> |
+<%= link_to 'Back', football_games_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Football Games</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @football_games.each do |football_game| %>
+      <tr>
+        <td><%= football_game.name %></td>
+        <td><%= football_game.age %></td>
+        <td><%= football_game.height %></td>
+        <td><%= football_game.weight %></td>
+        <td><%= football_game.phone %></td>
+        <td><%= link_to 'Show', football_game %></td>
+        <td><%= link_to 'Edit', edit_football_game_path(football_game) %></td>
+        <td><%= link_to 'Destroy', football_game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Football game', new_football_game_path %>
